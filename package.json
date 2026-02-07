@@ -1,0 +1,28 @@
+{
+  "name": "eventgo-backend",
+  "version": "1.0.0",
+  "description": "Backend za EventGo aplikacijo (Node.js + Express + PostgreSQL)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "debug": "nodemon --inspect index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "pg": "^8.11.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "validator": "^13.15.23"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

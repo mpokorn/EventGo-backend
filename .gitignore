@@ -1,0 +1,192 @@
+# ================================
+# Environment Variables
+# ================================
+.env
+.env.*
+!.env.example
+
+# Backend
+backend/.env
+backend/.env.*
+
+# Frontend
+frontend/.env
+frontend/.env.*
+
+# Mobile App
+mobile-app/.env
+mobile-app/.env.*
+
+# ================================
+# Database Files & Data
+# ================================
+# PostgreSQL data directory (Docker volume)
+data/
+data/db/
+data/pgadmin/
+
+# SQL dumps and backups
+*.sql
+*.dump
+*.backup
+
+# Database credentials
+pg_service.conf
+.pgpass
+
+# ================================
+# Node.js / NPM
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Lock files (optional - uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+.next/
+out/
+web-build/
+
+# ================================
+# Expo / React Native (Mobile App)
+# ================================
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+.metro-health-check*
+
+# Generated native folders
+mobile-app/ios/
+mobile-app/android/
+
+# ================================
+# Logs
+# ================================
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker logs
+*.pid
+
+# ================================
+# OS Files
+# ================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ================================
+# IDE / Editors
+# ================================
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# ================================
+# Testing & Coverage
+# ================================
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+
+# ================================
+# Temporary Files
+# ================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+
+# ================================
+# Python (if applicable)
+# ================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.venv/
+venv/
+ENV/
+
+# ================================
+# TypeScript
+# ================================
+*.tsbuildinfo
+
+# ================================
+# Security & Sensitive Data
+# ================================
+# Certificates & Keys
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+credentials/
+
+# ================================
+# Project Specific
+# ================================
+# ERD diagrams (optional - uncomment if you don't want them in git)
+# ERD_Diagram*.png
+
+# Sample data (optional - uncomment if needed)
+# sampleDATA.sql
