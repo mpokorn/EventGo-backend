@@ -48,7 +48,7 @@ EventGO Backend provides a RESTful API for managing events, tickets, users, and 
 
 ## Related Projects
 
-- **Frontend**: [EventGO-frontend](https://github.com/mpokorn/EventGo-frontend) (local: `../EventGO-frontend/`)
-- **Mobile App**: [EventGO-mobile-app](https://github.com/mpokorn/EventGo-mobile-app) (local: `../EventGO-mobile-app/`)
+- **Frontend**: [EventGO-frontend](https://github.com/mpokorn/EventGo-frontend) 
+- **Mobile App**: [EventGO-mobile-app](https://github.com/mpokorn/EventGo-mobile-app) 
 
 ---
