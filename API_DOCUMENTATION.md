@@ -1370,13 +1370,6 @@ All date and time values use ISO 8601 format:
 - XSS protection via input sanitization
 ---
 
-
-### Notes
-
-- The documentation is automatically generated from JSDoc comments
-- Swagger UI is accessible only when the backend server is running
-- Authentication tokens expire after a set time (check token settings)
-
 ## Useful Links
 
 - **Swagger UI**: http://localhost:5000/api-docs
