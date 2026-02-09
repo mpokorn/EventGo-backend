@@ -12,7 +12,6 @@ EventGO Backend provides a RESTful API for managing events, tickets, users, and 
 - **Event Management**: Create, update, and manage events
 - **Ticket System**: Multiple ticket types, purchases, and refunds
 - **Waitlist System**: Automatic ticket offering when events sell out
-- **Transaction Processing**: Payment handling and transaction history
 - **Analytics**: Event statistics and revenue tracking
 
 ---
@@ -21,9 +20,9 @@ EventGO Backend provides a RESTful API for managing events, tickets, users, and 
 
 ### For Users
 - Browse and search events
-- Purchase tickets with multiple payment methods
+- Purchase tickets 
 - Join waitlist for sold-out events
-- Request refunds and manage tickets
+- Manage tickets
 - View transaction history
 
 ### For Organizers
