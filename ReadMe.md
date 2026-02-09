@@ -49,7 +49,6 @@ EventGO Backend provides a RESTful API for managing events, tickets, users, and 
 - **Documentation**: Swagger
 - **Password Hashing**: bcrypt
 - **HTTP Client**: Axios
--
 
 ---
 
