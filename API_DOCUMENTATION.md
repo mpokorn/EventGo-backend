@@ -17,24 +17,6 @@
 
 ---
 
-## Overview
-
-EventGo is a comprehensive event management platform API that enables users to browse, create, and manage events, purchase tickets, and handle waitlists for sold-out events. The API supports user registration, authentication, event management, ticket purchasing, and transaction processing.
-
-**Version:** 1.0.0  
-**Last Updated:** February 2026
-
----
-
-## Base URL
-
-```
-http://localhost:5000
-```
-
-For production deployments, replace `localhost:5000` with your production domain.
-
----
 
 ## Authentication
 
@@ -59,7 +41,6 @@ Access tokens expire after a certain period. Use the refresh token endpoint to o
 - `POST /users/login` - User login
 - `POST /users/organizer-register` - Organizer registration
 - `POST /users/organizer-login` - Organizer login
-- `POST /users/refresh-token` - Refresh access token
 
 ---
 
@@ -69,26 +50,9 @@ Interactive API documentation is available via Swagger UI.
 
 ### Accessing Swagger
 
-1. **Start the backend server**:
-   ```bash
-   cd backend
-   npm start
-   ```
-
-2. **Open your browser** and navigate to:
    ```
    http://localhost:5000/api-docs
    ```
-
-### Swagger Features
-
-- **Interactive API Explorer**: Test endpoints directly from the browser
-- **Authentication**: Use the "Authorize" button to add your JWT token
-- **Request/Response Examples**: See sample requests and responses
-- **Schema Documentation**: View all data models and their properties
-- **Filter & Search**: Filter endpoints by tags (Users, Events, Tickets, etc.)
-
----
 
 ## API Endpoints
 

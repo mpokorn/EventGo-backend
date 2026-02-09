@@ -540,7 +540,7 @@ router.post("/", async (req, res, next) => {
     });
   } catch (err) {
     await client.query('ROLLBACK');
-    console.error("❌ Error in POST /tickets:", err);
+    console.error(" Error in POST /tickets:", err);
     next(err);
   } finally {
     client.release();

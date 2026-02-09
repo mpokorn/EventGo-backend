@@ -72,14 +72,14 @@ export async function cleanupExpiredReservations() {
         await client.query('COMMIT');
       } catch (error) {
         await client.query('ROLLBACK');
-        console.error(`❌ Error cleaning up expired reservation ${expiredTicket.id}:`, error);
+        console.error(`Error cleaning up expired reservation ${expiredTicket.id}:`, error);
       }
     }
 
     return { cleaned: expiredResult.rows.length };
 
   } catch (error) {
-    console.error("❌ Error in cleanupExpiredReservations:", error);
+    console.error("Error in cleanupExpiredReservations:", error);
     throw error;
   } finally {
     client.release();
@@ -89,7 +89,7 @@ export async function cleanupExpiredReservations() {
 // Run cleanup every 2 minutes
 setInterval(() => {
   cleanupExpiredReservations().catch(err => {
-    console.error("❌ Error in scheduled reservation cleanup:", err);
+    console.error(" Error in scheduled reservation cleanup:", err);
   });
 }, 2 * 60 * 1000); // 2 minutes
 
@@ -573,7 +573,7 @@ export async function assignTicketToWaitlist(event_id, ticket_type_id) {
 
     if (waitlistResult.rows.length === 0) {
       await client.query('ROLLBACK');
-      //console.log('❌ No waitlist users found');
+      //console.log(' No waitlist users found');
       return { assigned: false };
     }
 
@@ -633,7 +633,7 @@ export async function assignTicketToWaitlist(event_id, ticket_type_id) {
 
   } catch (error) {
     await client.query('ROLLBACK');
-    console.error("❌ Error in assignTicketToWaitlist:", error);
+    console.error("Error in assignTicketToWaitlist:", error);
     throw error;
   } finally {
     client.release();

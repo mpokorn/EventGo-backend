@@ -55,7 +55,7 @@ router.get("/", async (req, res, next) => {
 
     res.status(200).json(result.rows);
   } catch (err) {
-    console.error("❌ Error in GET /transactions:", err);
+    console.error(" Error in GET /transactions:", err);
     next(err);
   }
 });
