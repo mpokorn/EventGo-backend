@@ -52,6 +52,7 @@ Interactive API documentation is available via Swagger UI.
 
    ```
    http://localhost:5000/api-docs
+
    ```
 
 ## API Endpoints
@@ -241,16 +242,6 @@ Retrieve a specific user by ID (users can only access their own profile).
   }
 }
 ```
-
----
-
-#### Create User
-```
-POST /users
-```
-**Authentication Required**
-
-Create a new user (admin functionality).
 
 ---
 
@@ -1322,7 +1313,6 @@ The API uses standard HTTP status codes to indicate the success or failure of re
 
 **Transaction Status:** `pending`, `completed`, `refunded`, `expired`, `cancelled`
 
-**Payment Methods:** `credit_card`, `debit_card`, `paypal`, `cash`
 
 ---
 
@@ -1378,61 +1368,8 @@ All date and time values use ISO 8601 format:
 - All sensitive routes require authentication
 - SQL injection protection via parameterized queries
 - XSS protection via input sanitization
-
 ---
 
-## Support
-
-For questions or issues, please contact the development team or refer to the Swagger documentation at `/api-docs`.
-
-1. **Register or Login** to get a token
-2. **Click "Authorize"** in Swagger UI
-3. **Enter**: `Bearer <your-token-here>`
-4. All subsequent requests will include the token
-
-### Example Workflow
-
-1. Register a new user: `POST /users/register`
-2. Copy the returned token
-3. Click "Authorize" and paste the token
-4. Create an event: `POST /events` (requires organizer role)
-5. Browse events: `GET /events`
-6. Purchase tickets: `POST /tickets`
-
-### Development
-
-To add documentation to new endpoints, use JSDoc comments:
-
-```javascript
-/**
- * @swagger
- * /your-endpoint:
- *   get:
- *     summary: Short description
- *     tags: [TagName]
- *     parameters:
- *       - in: query
- *         name: paramName
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Success response
- */
-router.get("/your-endpoint", async (req, res) => {
-  // Your code
-});
-```
-
-### Schema Definitions
-
-All data models are defined in `backend/swagger.js`:
-- User
-- Event
-- Ticket
-- TicketType
-- Transaction
-- Waitlist
 
 ### Notes
 
@@ -1444,4 +1381,4 @@ All data models are defined in `backend/swagger.js`:
 
 - **Swagger UI**: http://localhost:5000/api-docs
 - **API Base URL**: http://localhost:5000
-- **Swagger Specification**: https://swagger.io/specification/
+
