@@ -1,5 +1,13 @@
 # EventGo API Documentation
 
+## Overview
+
+EventGo is a RESTful API for managing events, ticket sales, transactions, and waitlists.
+It supports multiple user roles (users, organizers, admins) and provides secure authentication
+using JWT tokens.
+
+The API is designed to be consumed by web and mobile clients.
+
 ## Table of Contents
 - [Overview](#overview)
 - [Base URL](#base-url)
@@ -16,7 +24,12 @@
 - [Data Models](#data-models)
 
 ---
+## Authorization & Roles
 
+| Role       | Capabilities |
+|------------|-------------|
+| User       | Browse events, buy tickets, manage own tickets and waitlist |
+| Organizer  | Create/manage own events, ticket types, refunds, analytics |
 
 ## Authentication
 
