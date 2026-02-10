@@ -1369,7 +1369,7 @@ All date and time values use ISO 8601 format:
 ### Validation
 
 - Email addresses must be valid format
-- Passwords must be at least 8 characters
+- Passwords must be at least 8 characters one special character and one number
 - Required fields are validated on all endpoints
 - Numeric IDs must be positive integers
 
