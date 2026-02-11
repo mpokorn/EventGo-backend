@@ -86,7 +86,7 @@ router.get("/user/:id", validateId('id'), async (req, res, next) => {
     const exists = await userExists(userId);
     if (!exists) {
       return res.status(404).json({
-        message: `User with ID ${userId} does not exist.`,
+        message: "User not found!",
       });
     }
 
@@ -98,7 +98,7 @@ router.get("/user/:id", validateId('id'), async (req, res, next) => {
 
     if (userCheck.rows.length === 0) {
       return res.status(404).json({
-        message: `User with ID ${userId} does not exist.`,
+        message: "User not found!",
       });
     }
 

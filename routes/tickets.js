@@ -127,7 +127,7 @@ router.get("/:id", validateId('id'), async (req, res, next) => {
     );
 
     if (result.rows.length === 0) {
-      return res.status(404).json({ message: `Ticket with ID ${id} does not exist.` });
+      return res.status(404).json({ message: "Ticket not found!" });
     }
 
     res.status(200).json(result.rows[0]);
@@ -466,7 +466,7 @@ router.post("/", async (req, res, next) => {
     const eventEndTime = new Date(event.end_datetime || event.start_datetime);
     if (eventEndTime < new Date()) {
       await client.query('ROLLBACK');
-      return res.status(400).json({ message: "Cannot purchase tickets for past events!" });
+      return res.status(410).json({ message: "Cannot purchase tickets for past events!" });
     }
     
     if (typeCheck.rowCount === 0) {

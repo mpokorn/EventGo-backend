@@ -362,7 +362,7 @@ router.post("/", async (req, res, next) => {
     // Check if event has already passed
     const eventEndTime = new Date(event.end_datetime || event.start_datetime);
     if (eventEndTime < new Date()) {
-      return res.status(400).json({ message: "Cannot join waitlist for past events!" });
+      return res.status(410).json({ message: "Cannot join waitlist for past events!" });
     }
 
     // Check if sold out

@@ -270,7 +270,7 @@ router.get("/:id", validateId('id'), async (req, res, next) => {
     );
 
     if (eventResult.rows.length === 0) {
-      return res.status(404).json({ message: `Event with ID ${id} does not exist.` });
+      return res.status(404).json({ message: "Event not found!" });
     }
 
     const event = eventResult.rows[0];

@@ -316,7 +316,7 @@ router.post("/organizer-register", async (req, res, next) => {
     );
 
     if (existing.rows.length > 0) {
-      return res.status(400).json({
+      return res.status(409).json({
         message: "User with this email already exists!"
       });
     }
@@ -541,7 +541,7 @@ router.get("/:id", requireAuth, validateId('id'), async (req, res, next) => {
     );
 
     if (result.rows.length === 0) {
-      return res.status(404).json({ message: `User with ID ${id} does not exist.` });
+      return res.status(404).json({ message: "User not found!" });
     }
 
     const counts = await pool.query(
@@ -642,7 +642,7 @@ router.post("/", requireAuth, async (req, res, next) => {
     );
 
     if (check.rows.length > 0) {
-      return res.status(400).json({
+      return res.status(409).json({
         message: "User with this email already exists!"
       });
     }
@@ -879,7 +879,7 @@ router.put("/:id", requireAuth, validateId('id'), sanitizeBody, async (req, res,
       );
       
       if (emailCheck.rows.length > 0) {
-        return res.status(400).json({ message: "Email already in use by another account!" });
+        return res.status(409).json({ message: "Email already in use by another account!" });
       }
       
       updates.push(`email = $${paramIndex++}`);
