@@ -483,7 +483,7 @@ router.post("/", async (req, res, next) => {
       });
     }
 
-    // 🧾 Create transaction
+    // Create transaction
     const total_price = Number(price) * validQuantity;
     const txResult = await client.query(
       `INSERT INTO transactions (user_id, total_price, status, payment_method)
